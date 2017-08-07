@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" />
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/timer.js"></script>
+		<title>时间计时器插件</title>
+		<style>
+			.timer {
+				width: 230px;
+				height: 110px;
+				border: 1px solid #ccc;
+				/*margin:0 auto;*/
+				/*position:absolute;
+    			right:14%;*/
+				/*float: right;*/
+				margin-top: 20px;
+				text-align: center
+			}
+			
+			.timer span {
+				line-height: 60px;
+				font-size: 30px;
+				color: #2db7b7;
+				font-weight: bolder;
+			}
+			
+			.timer-title {
+				width: 100%;
+				height: 40px;
+				/*background:#2a90d9;*/
+				background: #3498DB;
+				text-align: center;
+				color: #fff;
+				line-height: 40px;
+				font-weight: bolder;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="timer center-block">
+			<div class="timer-title">时间计时器</div>
+			<span id="timer">00:00:00</span>
+		</div>
+		<div class="timer center-block">
+			<div class="timer-title">倒计时器 120 秒</div>
+			<span id="countDown">000</span>
+		</div>
+	</body>
+
+</html>
+<script type="application/javascript">
+	window.onload = function(){
+		startTimer("timer");
+		startSecondCountDown("countDown",120);
+	}
+</script>
