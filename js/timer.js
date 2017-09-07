@@ -21,7 +21,9 @@ function timer(id){
 		var str_sec = second;
 		var str_min = minute;
 		var str_h = hour;
-		
+		console.log("s:"+second);
+		console.log("m:"+minute);
+		console.log("h:"+hour);
 		if(str_sec < 10) {
 			str_sec = "0" + second;
 		}
@@ -36,14 +38,20 @@ function timer(id){
 		n_time = time;//对最新时间进行存储
 		console.log(time);
 		document.getElementById(id).innerText = time;
-		second++;
+		second += 60;
 		if(second > 59) {
 			second = 0;
 			minute++;
 		}
 		if(minute > 59) {
 			second = 0;
+			minute = 0;
 			hour++;
+		}
+		if(hour > 24){
+			second = 0;
+			minute = 0;
+			hour = 0;
 		}
 	},1000);
 }
